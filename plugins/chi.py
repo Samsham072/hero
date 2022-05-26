@@ -27,13 +27,13 @@ async def start(_, message):
         r =  requests.Session()
         crsf = au_one(r)
         assert crsf, "Error On First requests"
-        await xx.edit("First Requests Completed")
+        await xx.edit("Done 50%🥳")
         rand_user = random_user_api().get_random_user_info()
         addr = real_random_address()
         b = au_two(r, rand_user, crsf)
         assert b, " Error On Second requests"
         sec, req_sec = b
-        await xx.edit("Second Requests Completed")
+        await xx.edit("Getting Result🤠")
         last = au_three(r, sec, req_sec, cc, mes,ano, cvv)
         assert last, "Error On Last Requests"
         # print(last)
