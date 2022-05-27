@@ -37,7 +37,7 @@ async def start(_, message):
         await xx.edit("Second Requests Completed")
         g = def_last(rand_user, r, cc, mes, ano, cvv, auth_token, checkout_url, price, payment_gateway)
         assert g, "Error On Last Requests"
-        # await xx.edit("Last Requests Completed")
+        await xx.edit("Last Requests Completed")
         r_text, r_logo, r_respo = get_response(g.text)
         mess = f"""
 Card: `{cc}|{mes}|{ano}|{cvv}`
