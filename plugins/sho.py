@@ -29,10 +29,10 @@ async def start(_, message):
         a = sho_one(r, rand_user)
         assert a, "Error On First requests"
         auth_token,checkout_url, payment_gateway = a
-        # await xx.edit("First Requests Completed")
+        await xx.edit("First Requests Completed")
         g = sho_two(r,rand_user, cc,mes,ano,cvv, payment_gateway,checkout_url, auth_token)
         assert g, "Error On Last Requests"
-        # await xx.edit("Last Requests Completed")
+        await xx.edit("Last Requests Completed")
         r_text1,r_logo,r_respo,r_text = get_response_sho_br(g)
         mess = f"""
 Card: `{cc}|{mes}|{ano}|{cvv}`
